@@ -7,6 +7,27 @@ body {
     scroll-behavior: smooth;
 }
 
+#find {
+    color: #ff4c4c;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 14px 0;
+    border: transparent;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+    background: #1e272e;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 0.7em 2em;
+}
+#find:hover {
+    color: #1e272e;
+    background: #ff4c4c;
+}
+
 body a {
     text-decoration: none;
     transition: 0.5s all;
@@ -659,8 +680,8 @@ ul.tic-info li {
 }
 
 span.money {
-    font-size: 1em;
-    font-weight: 800;
+    font-size: 0.75em;
+    font-weight: 700;
     color: #ff4c4c;
     letter-spacing: 2px;
 }
