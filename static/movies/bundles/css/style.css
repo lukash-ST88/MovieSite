@@ -7,6 +7,23 @@ body {
     scroll-behavior: smooth;
 }
 
+div.left-side button.find {
+    color: #ff4c4c;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 14px 0;
+    border: transparent;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+    background: #1e272e;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 0.7em 2em;
+}
+
 body a {
     text-decoration: none;
     transition: 0.5s all;

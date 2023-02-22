@@ -49,7 +49,7 @@ class FramesInline(admin.StackedInline):
 class MovieAdmin(TranslationAdmin):
     """Фильмы"""
     list_display = ("title", "cat", "url", "draft")
-    list_filter = ("cat", "year")
+    list_filter = ("cat",)
     search_fields = ("title", "category__name")  # поля для поиска
     inlines = [ReviewInline, FramesInline]  # для добавления редактирования отзывов к фильму в редакторе фильмов
     actions = ['unpublish', 'publish'] # действия с гропой объектов
@@ -65,7 +65,7 @@ class MovieAdmin(TranslationAdmin):
             "fields": ("description", "poster")
         }),
         (None, {
-            "fields": (("year", "release", "country"),)
+            "fields": (("year", "country"),)
         }),
         ("Directors and Actors", {
             "classes": ("collapse",),  # collapse - сслыка на вкладку с полями записи
