@@ -1,0 +1,141 @@
+{% load movie_tag %}
+                <!-- product left -->
+
+  <div class="side-bar col-lg-4">
+                    <div class="search-bar w3layouts-newsletter">
+                        <h3 class="sear-head editContent" style="outline: none; cursor: inherit;">
+                            Поиск фильма</h3>
+                        <form action="{% url 'search' %}" method="get" class="d-flex editContent"
+                              style="outline: none; cursor: inherit;">
+                            <input type="search" placeholder="Введите название фильма..." name="q"
+                                   class="form-control" required="">
+                            <button type="submit" class="btn1 btn" style="outline: none; cursor: inherit;">
+                                <span class="fa fa-search" aria-hidden="true"></span></button>
+                        </form>
+                    </div>
+                    <!--preference -->
+                    <form action="{% url 'filter' %}" method="get">
+                    <div class="left-side my-4">
+                        <h3 class="sear-head editContent" style="outline: none; cursor: inherit;">Жанры</h3>
+                        <ul class="w3layouts-box-list">
+                            {% for genre in view.get_genre %}
+                            <li class="editContent" style="outline: none; cursor: inherit;">
+                                <input type="checkbox" class="checked" name="genre" value="{{genre.id}}">
+                                <span class="span editContent"
+                                      style="outline: none; cursor: inherit;">{{genre}}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- // preference -->
+                    <!-- discounts -->
+
+                    <div class="left-side">
+                        <h3 class="sear-head editContent" style="outline: none; cursor: inherit;">
+                            Год</h3>
+                        <ul class="w3layouts-box-list">
+                            {% for year in view.get_year %}
+                            <li class="editContent" style="outline: none; cursor: inherit;">
+                                <input type="checkbox" class="checked" name="year" value="{{year.year}}">
+                                <span class="span editContent"
+                                      style="outline: none; cursor: inherit;">{{year.year}}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                        <button type="submit">найти по фильтру</button>
+                    </form>
+
+                    <!-- //discounts -->
+                    <!-- reviews -->
+                    <div class="customer-rev left-side my-4">
+                        <h3 class="sear-head editContent" style="outline: none; cursor: inherit;">
+                            Рейтинг</h3>
+                        <ul class="w3layouts-box-list">
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="editContent"
+                                          style="outline: none; cursor: inherit;">5.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="editContent"
+                                          style="outline: none; cursor: inherit;">4.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-half-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="editContent"
+                                          style="outline: none; cursor: inherit;">3.5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="editContent"
+                                          style="outline: none; cursor: inherit;">3.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-half-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"
+                                          style="outline: none; cursor: inherit;"></span>
+                                    <span class="editContent"
+                                          style="outline: none; cursor: inherit;">2.5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //reviews -->
+                    <!-- deals -->
+{% last_movie_tag %}
+                    <!-- //deals -->
+                    <!-- //deals -->
+  </div>

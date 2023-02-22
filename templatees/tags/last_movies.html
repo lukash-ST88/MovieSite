@@ -1,0 +1,14 @@
+
+                    <div class="deal-leftmk left-side">
+                        <h3 class="sear-head editContent">
+                            Последние добавленные</h3>
+                        <div class="special-sec1 row mt-3 editContent">
+                            {% for film in last_movies %}
+                            <div class="img-deals col-md-4">
+                                <a href="{{film.get_absolute_url}}" class="editContent">
+                                    <img src="{{ film.poster.url }}" class="img-fluid" alt="нет фото: {{film.title}}">
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        </div>
